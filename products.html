@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <title>Café Adrianne | Products</title>
+  <link rel = "stylesheet" href = "css/styles.css">
+</head>
+<body>
+  <header>
+    <div class = "logo">
+      <img src = "images/logo.jpg" alt = "Café Adrianne Logo">
+      <h1>Café Adrianne</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href = "home.html">Home</a></li>
+        <li><a href = "feature.html">Feature</a></li>
+        <li><a href = "products.html" class="active">Products</a></li>
+        <li><a href = "contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class = "hero">
+    <h2>Our Menu</h2>
+    <p>Browse our selection of coffee, drinks, and pastries</p>
+  </section>
+
+  <div class = "filter-sort-container">
+    <input type = "text" id = "search" placeholder = "Search for a product...">
+
+    <select id = "category">
+      <option value = "all">All Categories</option>
+      <option value = "espresso">Handcrafted Espresso</option>
+      <option value = "specialty">Specialty Brewed Coffee</option>
+      <option value = "noncoffee">Non Coffee</option>
+      <option value = "milktea">Signature Milk Tea</option>
+      <option value = "blended">Blended Drinks</option>
+      <option value = "refreshments">Refreshments</option>
+      <option value = "breakfast">All Day Breakfast</option>
+      <option value = "pasta">Pasta</option>
+      <option value = "main">Main</option>
+      <option value = "dessert">Dessert</option>
+      <option value = "starters">Starters</option>
+      <option value = "waffles">Waffles</option>
+      <option value = "sandwiches">Sandwiches</option>
+    </select>
+
+    <select id = "sort">
+      <option value = "default" selected>Default</option>
+      <option value = "name">Sort by Name (A–Z)</option>
+      <option value = "price-asc">Price: Low to High</option>
+      <option value = "price-desc">Price: High to Low</option>
+    </select>
+  </div>
+
+  <div id = "floating-cart">🛒 Cart (<span id = "cart-count">0</span>)
+    <div id = "cart-details">
+      <ul id = "cart-items"></ul>
+      <div id = "cart-total">Total: ₱0.00</div>
+    </div>
+  </div>
+
+  <section class = "products">
+    <h2>Available Products</h2>
+    <div class = "grid" id = "product-list">
+
+    <!-- ================== HANDCRAFTED ESPRESSO ================== -->
+    <h3 class = "category" data-category = "espresso">Handcrafted Espresso (Hot/Iced)</h3>
+
+    <div class = "card" data-category = "espresso" data-name = "Americano">
+      <img src = "images/americano.jpg" alt = "Americano">
+      <h3>Americano</h3>
+      <p class = "price">₱110</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Cappuccino">
+      <img src = "images/fresh-coffee.jpg" alt = "Cappuccino">
+      <h3>Cappuccino (Hot)</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Caramel Macchiato">
+      <img src = "images/caramel-macchiato.jpg" alt = "Caramel Macchiato">
+      <h3>Caramel Macchiato</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Vanilla Sea Salt">
+      <img src = "images/vanilla-sea-salt-latte1.jpg" alt = "Vanilla Sea Salt">
+      <h3>Vanilla Sea Salt</h3>
+      <p class = "price">₱170</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Dirty Horchata">
+      <img src = "images/dirty-horchata.jpg" alt = "Dirty Horchata">
+      <h3>Dirty Horchata</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Almond Jelly">
+      <img src = "images/almond-jelly.jpg" alt = "Almond Jelly">
+      <h3>Almond Jelly</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Hazelnut Latte">
+      <img src = "images/hazelnut-latte.png" alt = "Hazelnut Latte">
+      <h3>Hazelnut Latte</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Spanish Latte">
+      <img src="images/spanish-latte.jpg" alt = "Spanish Latte">
+      <h3>Spanish Latte</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Barista Breakfast Latte">
+      <img src = "images/barista-breakfast-latte.jpg" alt = "Barista Breakfast Latte">
+      <h3>Barista Breakfast Latte</h3>
+      <p class = "price">₱175</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Dirty Matcha">
+      <img src = "images/dirty-matcha.PNG" alt = "Dirty Matcha">
+      <h3>Dirty Matcha</h3>
+      <p class = "price">₱165</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Caramel Mocha">
+      <img src = "images/caramel-mocha.jpg" alt = "Caramel Mocha">
+      <h3>Caramel Mocha</h3>
+      <p class = "price">₱165</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "Oatmilk Shakerato">
+      <img src = "images/oatmilk-shakerato.jpg" alt = "Oatmilk Shakerato">
+      <h3>Oatmilk Shakerato</h3>
+      <p class = "price">₱165</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "espresso" data-name = "White Mocha Oatmilk">
+      <img src = "images/white-mocha-oatmilk2.jpg" alt = "White Mocha Oatmilk">
+      <h3>White Mocha Oatmilk</h3>
+      <p class = "price">₱170</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== SPECIALTY BREWED COFFEE ================== -->
+    <h3 class = "category" data-category = "specialty">Specialty Brewed Coffee (Hot/Iced)</h3>
+
+    <div class = "card" data-category = "specialty" data-name = "Matcha Forest Latte">
+      <img src = "images/matcha-forest-latte.PNG" alt = "Matcha Forest Latte">
+      <h3>Matcha Forest Latte</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "specialty" data-name = "Biscoff Speculoos Latte">
+      <img src = "images/biscoff-speculoos-latte.jpg" alt = "Biscoff Speculoos Latte">
+      <h3>Biscoff Speculoos Latte</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "specialty" data-name = "Caramel Crème Latte">
+      <img src = "images/caramel-creme-latte1.jpg" alt = "Caramel Crème Latte">
+      <h3>Caramel Crème Latte</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "specialty" data-name = "Manabat's Mocha Latte">
+      <img src = "images/mocha-latte.jpg" alt = "Manabat's Mocha Latte">
+      <h3>Manabat's Mocha Latte</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "specialty" data-name = "Cozy Cinnamon Toast">
+      <img src = "images/cozy-cinnamon-toast.jpg" alt = "Cozy Cinnamon Toast">
+      <h3>Cozy Cinnamon Toast</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== NON COFFEE ================== -->
+    <h3 class = "category" data-category = "noncoffee">Non-Coffee</h3>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Strawberry Cream">
+      <img src = "images/iced-strawberry-cream.jpg" alt = "Strawberry Cream">
+      <h3>Strawberry Cream</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Matcha Cream">
+      <img src = "images/matcha-cream1.jpg" alt = "Matcha Cream">
+      <h3>Matcha Cream</h3>
+      <p class  = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Signature Double Chocolate">
+      <img src = "images/sig-double-chocolate.jpg" alt = "Signature Double Chocolate">
+      <h3>Signature Double Chocolate</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Chocolate Hazelnut">
+      <img src = "images/chocolate-hazelnut.jpg" alt = "Chocolate Hazelnut">
+      <h3>Chocolate Hazelnut</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Matcha Strawberry Cream">
+      <img src = "images/strawberry-matcha-cream.jpg" alt = "Matcha Strawberry Cream">
+      <h3>Matcha Strawberry Cream</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Speculoos Biscoff Cream">
+      <img src = "images/speculoos-biscoff-cream1.jpg" alt = "Speculoos (Biscoff) Cream">
+      <h3>Speculoos (Biscoff) Cream</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Mango Cream">
+      <img src = "images/mango-cream.jpeg" alt = "Mango Cream">
+      <h3>Mango Cream</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "White Cinnamon Horchata">
+      <img src = "images/white-cinnamon-horchata.jpg" alt = "White Cinnamon Horchata">
+      <h3>White Cinnamon Horchata</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Berry Horchata">
+      <img src="images/blueberry-horchata2.jpg" alt = "Berry Horchata">
+      <h3>Berry Horchata</h3>
+      <p class="price">₱160</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "Strawberry Creamcheese">
+      <img src = "images/strawberry-creamcheese.jpg" alt = "Strawberry Creamcheese">
+      <h3>Strawberry Creamcheese</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "noncoffee" data-name = "White Chocolate Matcha">
+      <img src = "images/white-chocolate-matcha.jpg" alt = "White Chocolate Matcha">
+      <h3>White Chocolate Matcha</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== SIGNATURE MILK TEA ================== -->
+    <h3 class = "category" data-category = "milktea">Signature Milk Tea</h3>
+
+    <div class = "card" data-category = "milktea" data-name = "Classic Okinawa">
+      <img src = "images/classic-okinawa.jpg" alt = "Classic Okinawa">
+      <h3>Classic Okinawa</h3>
+      <p class = "price">₱99</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Classic Salted Caramel">
+      <img src = "images/classic-salted-caramel.PNG" alt = "Classic Salted Caramel">
+      <h3>Classic Salted Caramel</h3>
+      <p class = "price">₱99</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Cookies N Cream">
+      <img src = "images/cookies-n-cream.jpg" alt = "Cookies N' Cream">
+      <h3>Cookies N' Cream</h3>
+      <p class = "price">₱110</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Earl Grey Oreo Cheesecake">
+      <img src = "images/earl-grey-oreo-cheesecake.jpg" alt = "Earl Grey Oreo Cheesecake">
+      <h3>Earl Grey Oreo Cheesecake</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Matcha Graham Cheesecake">
+      <img src = "images/matcha-graham-cheesecake2.jpg" alt = "Matcha Graham Cheesecake">
+      <h3>Matcha Graham Cheesecake</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Speculoos Biscoff Overload">
+      <img src = "images/speculoos-biscoff-overload2.jpg" alt = "Speculoos Biscoff Overload">
+      <h3>Speculoos Biscoff Overload</h3>
+      <p class = "price">₱165</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Taro Ube Cheesecake">
+      <img src = "images/taro-ube-cheesecake.jpg" alt = "Taro Ube Cheesecake">
+      <h3>Taro Ube Cheesecake</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "milktea" data-name = "Chocolate Nutella">
+      <img src = "images/chocolate-nutella.jpg" alt = "Chocolate Nutella">
+      <h3>Chocolate Nutella</h3>
+      <p class = "price">₱130</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== BLENDED DRINKS ================== -->
+    <h3 class = "category" data-category = "blended">Blended Drinks</h3>
+
+    <div class = "card" data-category = "blended" data-name = "Salted Caramel Milkshake">
+      <img src = "images/salted-caramel-milkshake.jpg" alt = "Salted Caramel Milkshake">
+      <h3>Salted Caramel Milkshake</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Strawberry Yogurt">
+      <img src = "images/strawberry-yogurt.jpg" alt = "Strawberry Yogurt">
+      <h3>Strawberry Yogurt</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Blueberry Milkshake">
+      <img src = "images/blueberry-milkshake.jpg" alt = "Blueberry Milkshake">
+      <h3>Blueberry Milkshake</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Mango Milkshake">
+      <img src = "images/mango-milkshake1.jpg" alt = "Mango Milkshake">
+      <h3>Mango Milkshake</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Cookies and Cream Milkshake">
+      <img src = "images/cookies-n-cream-milkshake.jpg" alt = "Cookies and Cream Milkshake">
+      <h3>Cookies and Cream Milkshake</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Caramel Milkshake Espresso">
+      <img src = "images/caramel-milkshake.jpg" alt = "Caramel Milkshake Espresso">
+      <h3>Caramel Milkshake (Espresso)</h3>
+      <p class = "price">₱170</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Mango Banana Smoothie">
+      <img src = "images/mango-banana-smoothie.jpg" alt = "Mango Banana Smoothie">
+      <h3>Mango Banana Smoothie</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "blended" data-name = "Strawberry Banana Smoothie">
+      <img src = "images/strawberry-banana-smoothie.PNG" alt = "Strawberry Banana Smoothie">
+      <h3>Strawberry Banana Smoothie</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== REFRESHMENTS ================== -->
+    <h3 class = "category" data-category = "refreshments">Refreshments</h3>
+
+    <div class = "card" data-category = "refreshments" data-name = "Fresh Lemon Iced Tea">
+      <img src = "images/lemon1.jpg" alt = "Fresh Lemon Iced Tea">
+      <h3>Fresh Lemon Iced Tea</h3>
+      <p class = "price">₱120</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "refreshments" data-name = "Blueberry Lemonade Slush">
+      <img src = "images/blueberry-lemonade-slush.jpg" alt = "Blueberry Lemonade Slush">
+      <h3>Blueberry Lemonade Slush</h3>
+      <p class = "price">₱120</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "refreshments" data-name = "Strawberry Lemonade">
+      <img src = "images/strawberry-lemonade1.jpg" alt = "Strawberry Lemonade">
+      <h3>Strawberry Lemonade</h3>
+      <p class = "price">₱120</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "refreshments" data-name = "Classic Lemonade">
+      <img src = "images/classic-lemonade.jpg" alt = "Classic Lemonade">
+      <h3>Classic Lemonade</h3>
+      <p class = "price">₱120</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "refreshments" data-name = "Butterfly Pea Lemonade">
+      <img src = "images/butterfly-pea-lemonade.jpg" alt = "Butterfly Pea Lemonade">
+      <h3>Butterfly Pea Lemonade</h3>
+      <p class = "price">₱120</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "refreshments" data-name = "Cucumber Lemonade">
+      <img src = "images/cucumber-lemonade.jpg" alt="Cucumber Lemonade">
+      <h3>Cucumber Lemonade</h3>
+      <p class = "price">₱120</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== ALL DAY BREAKFAST ================== -->
+    <h3 class = "category" data-category = "breakfast">All Day Breakfast</h3>
+
+    <div class = "card" data-category = "breakfast" data-name = "Luncheon Meat, Eggs, Rice">
+      <img src = "images/luncheon-meat1.jpg" alt = "Luncheon Meat, Eggs, Rice">
+      <h3>Luncheon Meat, Eggs, Rice</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "breakfast" data-name = "Longganisa, Eggs, Rice">
+      <img src = "images/longganisa.jpg" alt = "Longganisa, Eggs, Rice">
+      <h3>Longganisa, Eggs, Rice</h3>
+      <p class = "price">₱160</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "breakfast" data-name = "Hotdog, Eggs, Rice">
+      <img src = "images/hotdog.jpg" alt = "Hotdog, Eggs, Rice">
+      <h3>Hotdog, Eggs, Rice</h3>
+      <p class = "price">₱145</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "breakfast" data-name = "Sausage, Eggs, Rice">
+      <img src = "images/sausage.jpg" alt = "Sausage, Eggs, Rice">
+      <h3>Sausage, Eggs, Rice</h3>
+      <p class = "price">₱185</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "breakfast" data-name = "Tapa, Eggs, Rice">
+      <img src = "images/tapa.jpg" alt = "Tapa, Eggs, Rice">
+      <h3>Tapa, Eggs, Rice</h3>
+      <p class = "price">₱195</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== PASTA ================== -->
+    <h3 class = "category" data-category = "pasta">Pasta</h3>
+
+    <div class = "card" data-category = "pasta" data-name = "Truffle Pasta">
+      <img src = "images/truffle-pasta.jpg" alt = "Truffle Pasta">
+      <h3>Truffle Pasta</h3>
+      <p class = "price">₱349</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "pasta" data-name = "Penne Pasta in Red Sauce">
+      <img src = "images/penne-pasta2.jpg" alt = "Penne Pasta in Red Sauce">
+      <h3>Penne Pasta in Red Sauce</h3>
+      <p class = "price">₱280</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "pasta" data-name = "Creamy Pesto Pasta with Sausage">
+      <img src = "images/creamy-pesto-pasta-with-sausage.jpg" alt = "Creamy Pesto Pasta with Sausage">
+      <h3>Creamy Pesto Pasta with Sausage</h3>
+      <p class = "price">₱295</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "pasta" data-name = "Creamy Carbonara">
+      <img src = "images/creamy-carbonara1.jpg" alt = "Creamy Carbonara">
+      <h3>Creamy Carbonara</h3>
+      <p class = "price">₱280</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== MAIN (WITH RICE AND SIDES) ================== -->
+    <h3 class = "category" data-category = "main">Main (with Rice and Sides)</h3>
+
+    <div class = "card" data-category = "main" data-name = "Angus Salisbury Steak">
+      <img src = "images/angus-salisbury-steak.PNG" alt = "Angus Salisbury Steak">
+      <h3>Angus Salisbury Steak</h3>
+      <p class = "price">₱380</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "main" data-name = "Hickory Pork Belly">
+      <img src = "images/hickory-pork-belly.jpg" alt = "Hickory Pork Belly">
+      <h3>Hickory Pork Belly</h3>
+      <p class = "price">₱340</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "main" data-name = "Roast Beef and Mushroom">
+      <img src = "images/roast-beef-and-mushroom.jpg" alt = "Roast Beef and Mushroom">
+      <h3>Roast Beef and Mushroom</h3>
+      <p class="price">₱340</p>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "main" data-name = "Creamy Chicken Bits & Sausage">
+      <img src = "images/creamy-chicken-bits-and-sausage.jpg" alt = "Creamy Chicken Bits & Sausage">
+      <h3>Creamy Chicken Bits & Sausage</h3>
+      <p class = "price">₱280</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== DESSERT ================== -->
+    <h3 class = "category" data-category = "dessert">Dessert</h3>
+
+    <div class = "card" data-category = "dessert" data-name = "Blueberry Cheesecake Cups">
+      <img src = "images/blueberry-cheesecake-cups.PNG" alt = "Blueberry Cheesecake Cups">
+      <h3>Blueberry Cheesecake Cups</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "dessert" data-name = "Dulce De Leche CC Cups">
+      <img src = "images/dulce-de-leche.jpg" alt = "Dulce De Leche CC Cups">
+      <h3>Dulce De Leche CC Cups</h3>
+      <p class = "price">₱150</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "dessert" data-name = "Cinnamon Bread">
+      <img src = "images/cinnamon-bread1.jpg" alt = "Cinnamon Bread">
+      <h3>Cinnamon Bread</h3>
+      <p class = "price">₱99</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "dessert" data-name = "Overload Cookie">
+      <img src = "images/overloaded-cookies.jpg" alt = "Overload Cookie">
+      <h3>Overload Cookie</h3>
+      <p class = "price">₱99</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "dessert" data-name = "Chocolate Walnut Cookie">
+      <img src = "images/chocolate-walnut-cookie.jpg" alt = "Chocolate Walnut Cookie">
+      <h3>Chocolate Walnut Cookie</h3>
+      <p class = "price">₱99</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "dessert" data-name = "Smores Cookie">
+      <img src = "images/smores-cookie.jpg" alt = "Smores Cookie">
+      <h3>Smores Cookie</h3>
+      <p class = "price">₱99</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== STARTERS ================== -->
+    <h3 class = "category" data-category = "starters">Starters</h3>
+
+    <div class = "card" data-category = "starters" data-name = "Nacho Chicken Salad">
+      <img src = "images/nacho-chicken-salad.jpg" alt = "Nacho Chicken Salad">
+      <h3>Nacho Chicken Salad</h3>
+      <p class = "price">₱320</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Cheesy Beef Nachos">
+      <img src = "images/cheesy-beef-nachos.jpg" alt = "Cheesy Beef Nachos">
+      <h3>Cheesy Beef Nachos</h3>
+      <p class = "price">₱349</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Chicken Quesadilla">
+      <img src = "images/chicken-quesadilla.PNG" alt = "Chicken Quesadilla">
+      <h3>Chicken Quesadilla</h3>
+      <p class = "price">₱290</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Beef Quesadilla">
+      <img src = "images/beef-quesadilla.jpg" alt = "Beef Quesadilla">
+      <h3>Beef Quesadilla</h3>
+      <p class = "price">₱290</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Taco Sticks with Dip">
+      <img src = "images/taco-sticks.jpg" alt = "Taco Sticks with Dip">
+      <h3>Taco Sticks with Dip</h3>
+      <p class = "price">₱220</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Mozzarella Sticks">
+      <img src = "images/mozzarella-sticks.jpg" alt = "Mozzarella Sticks">
+      <h3>Mozzarella Sticks</h3>
+      <p class = "price">₱220</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Classic Flavored Fries">
+      <img src = "images/classic-flavored-fries2.jpg" alt = "Classic Flavored Fries">
+      <h3>Classic Flavored Fries</h3>
+      <p class = "price">₱170</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "starters" data-name = "Truffle Flavored Fries">
+      <img src = "images/truffle-flavored-fries.jpg" alt = "Truffle Flavored Fries">
+      <h3>Truffle Flavored Fries</h3>
+      <p class = "price">₱195</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== WAFFLE ================== -->
+    <h3 class = "category" data-category = "waffles">Waffle</h3>
+
+    <div class = "card" data-category = "waffles" data-name = "Classic Honey Butter Waffle">
+      <img src = "images/classic-honey-butter-waffle.jpg" alt = "Classic Honey Butter Waffle">
+      <h3>Classic Honey Butter Waffle</h3>
+      <p class = "price">₱170</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "waffles" data-name = "Savory Waffles Sandwich">
+      <img src = "images/savory-waffle-sandwich.jpg" alt = "Savory Waffles Sandwich">
+      <h3>Savory Waffles Sandwich</h3>
+      <p class = "price">₱210</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "waffles" data-name = "Chocolate Smores">
+      <img src = "images/chocolate-smore.jpg" alt = "Chocolate Smores">
+      <h3>Chocolate Smores</h3>
+      <p class = "price">₱170</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <!-- ================== SANDWICHES ================== -->
+    <h3 class = "category" data-category = "sandwiches">Sandwiches</h3>
+
+    <div class = "card" data-category = "sandwiches" data-name = "MozzaCheddar Sandwich">
+      <img src = "images/mozzacheddar-sandwich.jpg" alt = "MozzaCheddar Sandwich">
+      <h3>MozzaCheddar Sandwich</h3>
+      <p class = "price">₱180</p>
+      <div class = "rating">⭐⭐⭐⭐☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "sandwiches" data-name = "Chicken Pesto Sandwich">
+      <img src = "images/chicken-pesto-sandwich.jpg" alt = "Chicken Pesto Sandwich">
+      <h3>Chicken Pesto Sandwich</h3>
+      <p class = "price">₱195</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "sandwiches" data-name = "Hotdog Sandwich">
+      <img src = "images/hotdog-sandwich.jpg" alt = "Hotdog Sandwich">
+      <h3>Hotdog Sandwich</h3>
+      <p class = "price">₱140</p>
+      <div class = "rating">⭐⭐⭐☆☆</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    <div class = "card" data-category = "sandwiches" data-name = "Quarter Pounder Burger">
+      <img src = "images/quarter-pounder-burger.jpg" alt = "Quarter Pounder Burger">
+      <h3>Quarter Pounder Burger</h3>
+      <p class = "price">₱249</p>
+      <div class = "rating">⭐⭐⭐⭐⭐</div>
+      <button class = "btn">Add to Cart</button>
+    </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Café Adrianne. All rights reserved.</p>
+  </footer>
+
+  <script src="script/products.js"></script>
+</body>
+</html>
